@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Queue;
 
-public class BFS {
+public class DFS {
 
     public static void main(String[] args){
 
@@ -26,29 +25,29 @@ public class BFS {
         // edges3.add(1);
         graph.add(new node(3, edges3));
 
-        bfs(graph, 4);
+        dfs(graph, 4);
 
     }
 
-    public static void bfs(List<node> graph, int n) {
+    public static void dfs(List<node> graph, int n) {
 
-        List<node> queue = new ArrayList<node>();
-        queue.add(graph.get(0));
-        bfs_node(graph, queue);
-        while(!queue.isEmpty()) bfs_node(graph, queue);
+        List<node> stack = new ArrayList<node>();
+        stack.add(graph.get(0));
+        dfs_node(graph, stack);
+        while(!stack.isEmpty()) dfs_node(graph, stack);
     }
-    public static void bfs_node(List<node> graph, List<node> queue){
+    public static void dfs_node(List<node> graph, List<node> stack){
 
-        node next_node = queue.get(0);
-        queue.remove(0);
+        node next_node = stack.get(stack.size()-1);
+        stack.remove(stack.size()-1);
         System.out.println(next_node.data);
         next_node.visited = true;
 
         for(int i=0;i<next_node.edges.size();i++){
             Integer edge = next_node.edges.get(i);
             node node_t = graph.get(edge);
-            if(node_t.visited == false && !queue.contains(node_t)){
-                queue.add(node_t);
+            if(node_t.visited == false && !stack.contains(node_t)){
+                stack.add(node_t);
             }
         }
     }
