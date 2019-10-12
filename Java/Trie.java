@@ -3,12 +3,13 @@ import java.util.List;
 public class Trie {
 
     public static void main(String[] args){
-        String s = new String("paranshu");
+        String s = new String("paranshusinghal");
 
         trienode root = new trienode();
         insert_string(s, root);
         System.out.println(contains_string("paranshi", root));
         System.out.println(contains_string("paranshu", root));
+        System.out.println(contains_string("paranshusinghal", root));
     }
 
     public static void insert_string(String s, trienode root){
@@ -24,11 +25,12 @@ public class Trie {
                 continue;
             } else {
                 trienode new_node = new trienode();
-                if(j==s.length() - 1) new_node.eow = true;
+                if(j==s.length() -1) new_node.eow = true;
                 root_temp.nodes[char_num] = new_node;
                 root_temp = new_node;
                 j++;
             }
+            
         }
     }
 
@@ -45,7 +47,12 @@ public class Trie {
                 return false;
             }
         }
-        return true;
+        if(root_temp.eow == true && j==s.length()) return true;
+        return false;
+    }
+
+    public static void delete_string(String s, trienode root){
+
     }
 
     public static class trienode {
