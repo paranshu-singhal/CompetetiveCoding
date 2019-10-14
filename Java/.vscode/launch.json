@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LongestPalindromicSubstringUsingDP",
+            "request": "launch",
+            "mainClass": "LongestPalindromicSubstringUsingDP"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TopoSort",
             "request": "launch",
             "mainClass": "TopoSort"
