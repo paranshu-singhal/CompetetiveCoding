@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LongestStringNonRepeatingChar",
+            "request": "launch",
+            "mainClass": "LongestStringNonRepeatingChar"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - LongestPalindromicSubstringUsingDP",
             "request": "launch",
             "mainClass": "LongestPalindromicSubstringUsingDP"
