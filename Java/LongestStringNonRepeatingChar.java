@@ -18,7 +18,7 @@ public class LongestStringNonRepeatingChar {
         int cur_len = 1; int max_len = 1;
 
         int[] hash = new int[256];
-        for(int i=0;i<26;i++) hash[i] = -1;
+        for(int i=0;i<256;i++) hash[i] = -1;
         hash[convertToNum(s.charAt(0))]=0;
 
         for(int i=1;i<s.length();i++){

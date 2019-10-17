@@ -6,33 +6,16 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - LongestStringNonRepeatingChar",
+            "name": "Debug (Launch) with Arguments Prompt",
             "request": "launch",
-            "mainClass": "LongestStringNonRepeatingChar"
+            "mainClass": "SortUsingStack",
+            "args": "${command:SpecifyProgramArgs}"
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - LongestPalindromicSubstringUsingDP",
+            "name": "CodeLens (Launch) - SortUsingStack",
             "request": "launch",
-            "mainClass": "LongestPalindromicSubstringUsingDP"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - TopoSort",
-            "request": "launch",
-            "mainClass": "TopoSort"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch) - Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-BFS",
-            "request": "launch",
-            "mainClass": "BFS"
+            "mainClass": "SortUsingStack"
         }
     ]
 }

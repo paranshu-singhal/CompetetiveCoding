@@ -2,30 +2,34 @@ import java.util.ArrayList;
 
 public class stack {
 
-    public static void main(String[] args){
+    // public static void main(String[] args){
 
-        stackset st = new stackset();
+    //     stackset st = new stackset();
 
-        st.push(10);
-        st.push(20);
+    //     st.push(10);
+    //     st.push(20);
 
-        System.out.println(st.pop());
-        System.out.println(st.pop());
-        System.out.println(st.pop());
+    //     System.out.println(st.pop());
+    //     System.out.println(st.pop());
+    //     System.out.println(st.pop());
 
-        st.push(30);
-        st.push(40);
+    //     st.push(30);
+    //     st.push(40);
 
-        System.out.println(st.pop());
-        System.out.println(st.pop());
-        System.out.println(queue.pop());
+    //     System.out.println(st.pop());
+    //     System.out.println(st.pop());
+    //     System.out.println(queue.pop());
 
-    }
+    // }
 
     public static class stackset {
 
-        ArrayList<Integer> stack = new ArrayList<>();
+        ArrayList<Integer> stack;
         int size=0;
+
+        public stackset(){
+            stack = new ArrayList<>();
+        }
 
         public void push(int data){
             stack.add(new Integer(data));
@@ -45,6 +49,14 @@ public class stack {
 
         public boolean isEmpty(){
             return stack.isEmpty();
+        }
+
+        public int size(){
+            return size;
+        }
+
+        public int seek(){
+            return stack.get(stack.size()-1).intValue();
         }
     }
 }
