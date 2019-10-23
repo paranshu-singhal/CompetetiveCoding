@@ -6,46 +6,16 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - LeetCode29",
+            "name": "CodeLens (Launch) - LeetCode39",
             "request": "launch",
-            "mainClass": "LeetCode29"
+            "mainClass": "LeetCode39"
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - MainClass",
+            "name": "CodeLens (Launch) - LeetCode34",
             "request": "launch",
-            "mainClass": "MainClass"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - LeetCode6",
-            "request": "launch",
-            "mainClass": "LeetCode6"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - LeetCode2",
-            "request": "launch",
-            "mainClass": "LeetCode2"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - LeetCode11",
-            "request": "launch",
-            "mainClass": "LeetCode11"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch) with Arguments Prompt",
-            "request": "launch",
-            "mainClass": "SortUsingStack",
+            "mainClass": "LeetCode34",
             "args": "${command:SpecifyProgramArgs}"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - SortUsingStack",
-            "request": "launch",
-            "mainClass": "SortUsingStack"
         }
     ]
 }
