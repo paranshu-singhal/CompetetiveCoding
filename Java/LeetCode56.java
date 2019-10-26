@@ -11,10 +11,10 @@ public class LeetCode56 {
     public static void main(String[] args) {
         
         int[][] multi = new int[][]{
-            { 1,4 },
-            {2,3},
-            {4,5},
-            {5,10}
+            {1,3},
+            {2,6},
+            {3,5},
+            {15,16}
           };
 
         Arrays.sort(multi, (a, b) -> Double.compare(a[0], b[0]));
@@ -29,28 +29,30 @@ public class LeetCode56 {
     }
     public static List<pair> merge(int[][] intervals) {
         
+        List<pair> res = new ArrayList();
         int i=0;
         int j=0;
-        int k=0;
-
-        List<pair> res = new ArrayList();
+        int k=1;
         
-        while(j<intervals.length){
-            if(j==intervals.length-1){
+        if(intervals.length == 1){
+            res.add(new pair(intervals[i][0], intervals[j][1]));
+            return res;
+        } else if(intervals.length == 0) return res;
+        
+        while(k<intervals.length){
+            if(intervals[j][1] < intervals[k][0]){
+                res.add(new pair(intervals[i][0], intervals[j][1]));
+                i=k;
+                j=k;
+            }
+            else if(intervals[j][1] >= intervals[k][0] && intervals[j][1] < intervals[k][1]){
+                j=k;
+            } 
+            if(k==intervals.length - 1){
                 res.add(new pair(intervals[i][0], intervals[j][1]));
                 break;
             }
-            else if(intervals[j][1] < intervals[k][0]){
-                res.add(new pair(intervals[i][0], intervals[j][1]));
-                i=j+1;
-                j=i;
-                k=j+1;
-            } else if(intervals[j][1] > intervals[k][0] && intervals[j][1] > intervals[k][1]){
-                k++;
-            } else {
-                j=k;
-                k++;
-            }
+            k++;
         }
         return res;
     }
