@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CountingGame",
+            "request": "launch",
+            "mainClass": "CountingGame"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - LeetCode140",
             "request": "launch",
             "mainClass": "LeetCode140"
