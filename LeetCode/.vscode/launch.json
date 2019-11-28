@@ -1,46 +1,15 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "CodeLens (Launch) - LeetCode106",
+            "name": "Python: Current File",
+            "type": "python",
             "request": "launch",
-            "mainClass": "LeetCode106"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - CountingGame",
-            "request": "launch",
-            "mainClass": "CountingGame"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - LeetCode140",
-            "request": "launch",
-            "mainClass": "LeetCode140"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - LeetCode80",
-            "request": "launch",
-            "mainClass": "LeetCode80"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Solution",
-            "request": "launch",
-            "mainClass": "Solution"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - LeetCode69",
-            "request": "launch",
-            "mainClass": "LeetCode69"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - LeetCode48",
-            "request": "launch",
-            "mainClass": "LeetCode48"
+            "program": "${file}",
+            "console": "integratedTerminal"
         }
     ]
 }
