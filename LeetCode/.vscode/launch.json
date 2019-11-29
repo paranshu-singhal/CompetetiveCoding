@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - LeetCode17",
+            "request": "launch",
+            "mainClass": "LeetCode17"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
