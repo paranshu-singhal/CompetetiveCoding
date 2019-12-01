@@ -1,39 +1,28 @@
-import java.util.List;
-import java.util.ArrayList;
-
-
-/**
- * LeetCode39
- */
-public class LeetCode39 {
-
-    public static void main(String[] args) {
-
-        int target = 10;
-
-        int[] nums = {2,3,5};
-    
-        List<Integer> r = new ArrayList<Integer>();
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
-
-        combinationSum(nums, target, 0, r, res);
-
-        System.out.println(res);
-    }
-
-    public static void combinationSum(int[] candidates, int target, int i, List<Integer> r, List<List<Integer>> res) {
+class Solution {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
         
-        if(target < 0) return;
-
-        if(target == 0){ 
-            res.add(new ArrayList<>(r));
+        List<List<Integer>> result = new ArrayList();
+        List<Integer> curList = new ArrayList();
+        
+        
+        backtrack(candidates, target, 0, 0,curList, result);
+        return result;
+    }
+    
+    void backtrack(int[] candidates, int target, int sum, int st, List<Integer> curList, List<List<Integer>> result){
+        
+        if( sum > target) return;
+        
+        if(sum == target) {
+            result.add(new ArrayList(curList));
             return;
         }
-
-        for(int st = i; st<candidates.length; st++){
-            r.add(candidates[st]);
-            combinationSum(candidates, target - candidates[st], st, r, res);
-            r.remove(r.size()-1);
+        
+        for(int i=st; i<candidates.length; i++){
+            
+            curList.add(candidates[i]);
+            backtrack(candidates, target, sum + candidates[i], i, curList, result);
+            curList.remove(curList.size()-1);
         }
     }
 }
