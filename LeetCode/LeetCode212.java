@@ -1,20 +1,32 @@
 class Solution {
-    public boolean exist(char[][] board, String word) {
+    public List<String> findWords(char[][] board, String[] words) {
+        Set<String> result = new HashSet();
         
         int m = board.length;
-        if(m==0) return false;
+        if(m==0) new ArrayList(result);
         int n = board[0].length;
         
-        if(word.length() == 0) return false;
+        //if(word.length() == 0) return resulr;
         
-        boolean[][] vis = new boolean[m][n];
-        
-        for(int i=m-1; i>=0; i--){
-            for(int j=n-1; j>=0; j--){
-                if(backtrack(board, word, i, j, 0, vis)) return true;
+        for(int k=0; k<words.length; k++){
+            boolean[][] vis = new boolean[m][n];
+            boolean flag = false;
+            
+            for(int i=m-1; i>=0; i--){
+                for(int j=n-1; j>=0; j--){
+                    if(backtrack(board, words[k], i, j, 0, vis)){
+                        result.add(words[k]);
+                        flag = true;
+                        break;
+                    } 
+                    if(flag) break;
+                }
             }
+        
         }
-        return false;
+        
+        return new ArrayList(result);
+        
     }
     
     boolean backtrack(char[][] board, String word, int i, int j, int cur, boolean[][] vis){
@@ -36,6 +48,7 @@ class Solution {
         vis[i][j] = false;
         
         return result;
+            
         
     }
 }
