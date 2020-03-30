@@ -6,22 +6,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - L39",
+            "name": "CodeLens (Launch) - LeetCode1130",
             "request": "launch",
-            "mainClass": "L39"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - LeetCode17",
-            "request": "launch",
-            "mainClass": "LeetCode17"
-        },
-        {
-            "name": "Python: Current File",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
+            "mainClass": "LeetCode1130",
+            "projectName": "LeetCode_a3e3acad"
         }
     ]
 }
