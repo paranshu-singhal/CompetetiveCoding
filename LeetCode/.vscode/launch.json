@@ -6,10 +6,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - LeetCode1130",
+            "name": "Debug (Launch) - Current File",
             "request": "launch",
-            "mainClass": "LeetCode1130",
-            "projectName": "LeetCode_a3e3acad"
+            "mainClass": "${file}"
         }
     ]
 }
