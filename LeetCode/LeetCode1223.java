@@ -27,11 +27,7 @@ class Solution {
             total[i] = sum;
             //System.out.println(Arrays.toString(dp[i]));
         }
-        
-        // int res=0;
-        // for(int i=0; i<6; i++){
-        //     res += dp[n-1][i];
-        // }
+    
         return total[n-1];
     }
 }
